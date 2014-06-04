@@ -11,4 +11,4 @@ Provides code to generate responses to common SASL mechanisms, including:
 * Login (Pseudo mechanism)
 * SCRAM
 
-From the (original Auth_SASL2 Pear package)[http://pear.php.net/package/Auth_SASL2/]
+From the original Auth_SASL2 Pear package : http://pear.php.net/package/Auth_SASL2/
