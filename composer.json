@@ -1,0 +1,31 @@
+{
+    "name": "movim/sasl2",
+    "version": "0.1.0",
+    "description": "Abstraction of various SASL mechanism responses. From the Auth_SASL2 Pear package",
+    "keywords": ["sasl2", "authentication", "scram", "auth"],
+    "homepage": "https://github.com/edhelas/sasl2",
+    "type": "library",
+    "license": "BSD",
+    "authors": [
+        {
+            "name": "Anish Mistry",
+            "email": "amistry@am-productions.biz"
+        },
+        {
+            "name": "Richard Heyes",
+            "email": "richard@php.net"
+        },
+        {
+            "name": "Michael Bretterklieber",
+            "email": "michael@bretterklieber.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SASL2\\": "src/SASL2"
+        }
+    },
+    "require": {
+        "php": ">=5.3.0"
+    }
+}
