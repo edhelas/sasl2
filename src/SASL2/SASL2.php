@@ -68,28 +68,29 @@ class SASL2
     */
     function factory($type)
     {
+        $classname = 'SASL2\Auth\\';
         switch (strtolower($type)) {
             case 'anonymous':
-                $classname = 'Anonymous';
+                $classname .= 'Anonymous';
                 break;
 
             case 'login':
-                $classname = 'Login';
+                $classname .= 'Login';
                 break;
 
             case 'plain':
-                $classname = 'Plain';
+                $classname .= 'Plain';
                 break;
 
             case 'external':
-                $classname = 'External';
+                $classname .= 'External';
                 break;
 
             case 'crammd5':
                 // $msg = 'Deprecated mechanism name. Use IANA-registered name: CRAM-MD5.';
                 // trigger_error($msg, E_USER_DEPRECATED);
             case 'cram-md5':
-                $classname = 'CramMD5';
+                $classname .= 'CramMD5';
                 break;
 
             case 'digestmd5':
@@ -98,7 +99,7 @@ class SASL2
             case 'digest-md5':
                 // $msg = 'DIGEST-MD5 is a deprecated SASL mechanism as per RFC-6331. Using it could be a security risk.';
                 // trigger_error($msg, E_USER_NOTICE);
-                $classname = 'DigestMD5';
+                $classname .= 'DigestMD5';
                 break;
 
             default:
@@ -106,7 +107,7 @@ class SASL2
                 if (preg_match($scram, $type, $matches))
                 {
                     $hash = $matches[1];
-                    $classname = 'SCRAM';
+                    $classname .= 'SCRAM';
                     $parameter = $hash;
                     break;
                 }
