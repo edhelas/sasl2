@@ -66,7 +66,7 @@ class SASL2
     *                             SCRAM-* (any mechanism of the SCRAM family)
     *                     Types are not case sensitive
     */
-    function factory($type)
+    static public function factory($type)
     {
         $classname = 'SASL2\Auth\\';
         switch (strtolower($type)) {
